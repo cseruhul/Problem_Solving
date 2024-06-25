@@ -16,6 +16,7 @@ public:
             ans[i] = map[ans[i]];
         }
 
+        return {ans};
 /*
         int n = nums.size(), answer = 0;
         vector<int> ans(n);
@@ -27,11 +28,11 @@ public:
                 }
             }
             ans[i] = answer;
-        }*/
+        }
         for(int i = 0; i < n; i++){
             cout << ans[i] << " ";
         }
-        return {ans};
+        return {ans};*/
     }
 };
 
