@@ -10,7 +10,7 @@ public:
             if(__builtin_popcount(i) == k)
                 ans += nums[i];
         }
-        cout << ans;
+        return ans;
     }
 };
 
