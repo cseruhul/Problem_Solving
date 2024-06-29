@@ -50,7 +50,7 @@ public:
 };
 
 int main(){
-    vector<int> nums = {10,4,8,3};
+    vector<int> nums = {2, 2, 5, 7, 3, 6};
     Solution obj1;
 
     obj1.leftRightDifference(nums);
