@@ -8,7 +8,7 @@ public:
         string answer;
         for (i = 0; i < s.size(); i++) {
             answer += s[i];
-            cout << s[i];
+            //cout << s[i];
             if (s[i+1] == ' ') {
                 space++;
             }
@@ -18,10 +18,10 @@ public:
         }
 
 
-        for(auto item : answer){
-            cout << item ;
-        }
-        cout << ";check;";
+        //for(auto item : answer){
+            //cout << item ;
+        //}
+        //cout << ";check;";
         return answer;
 
     }
