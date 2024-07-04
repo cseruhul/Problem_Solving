@@ -3,22 +3,14 @@ using namespace std;
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
-        map<int, int>answer;
-        int i = 0;
-        for(auto item:nums)
-        {
-            answer[item]++;
+        int i = 1, j = 1, n;
+        n = nums.size();
+        for(i; i < n; i++){
+            if(nums[i] != nums[i - 1]){
+                nums[j++] = nums[i];
+            }
         }
-        map<int,int>::iterator itr;
-        for(itr = answer.begin(); itr != answer.end(); itr++){
-            nums[i++] = itr->first;
-        }
-
-        for(auto item:nums)
-        {
-            cout << item << " ";
-        }
-        return answer.size();
+        return j;
     }
 };
 
