@@ -4,28 +4,20 @@ using namespace std;
 class Solution {
 public:
     int searchInsert(vector<int>& nums, int target) {
-        int l, r, m, n;
+        int l, r, m;
         l = 0;
-        n = nums.size();
-        r = n - 1;
-        while(l <= r){
+        r = nums.size() - 1;
+        while (l <= r) {
             m = l + (r - l) / 2;
-            cout << m << endl;
-            if(m == 0)
-                return 0;
-            if(m == n - 1)
-                return n;
-
-            if(nums[m - 1] < target && nums[m] >= target){
+            if (nums[m] == target)
                 return m;
-            }
-            if(target < nums[m]){
-                r = m-1;
-            }else{
-                l = m+1;
+            else if (target > nums[m]) {
+                l = m + 1;
+            } else {
+                r = m - 1;
             }
         }
-        return 0;
+        return l;
     }
 };
 
