@@ -3,6 +3,12 @@ using namespace std;
 class Solution {
 public:
     int minimumOperations(vector<int>& nums) {
+        int ans=0;
+        for(auto item:nums){
+            if(item % 3 != 0)
+                ans++;
+        }
+        /*
         int mod = 0, i, ans = 0, n;
         n = nums.size();
 
@@ -18,7 +24,7 @@ public:
                 ans += (3-mod);
             }
         }
-
+*/
         return ans;
     }
 };
