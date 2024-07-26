@@ -73,11 +73,9 @@ public:
         // Finding Border Elements
         for (int row = 0; row < mainRow; row++) {
             for (int col = 0; col < mainCol; col++) {
-
                 if ((board[row][col] == 'O') &&
                     (row * col == 0 || row == mainRow - 1 ||
                      col == mainCol - 1)) {
-
                     bordered_regions.insert(uf.findRoot(position(row, col)));
                 }
             }
