@@ -7,30 +7,39 @@ class Solution {
         long long number1, number2;
 
         for (auto item : tokens) {
-            if (item == "+") {
+            if (item == "+" || item == "-" || item == "*" || item == "/") {
                 number2 = numbers.top();
                 numbers.pop();
                 number1 = numbers.top();
                 numbers.pop();
-                numbers.push(number1 + number2);
-            } else if (item == "-") {
-                number2 = numbers.top();
-                numbers.pop();
-                number1 = numbers.top();
-                numbers.pop();
-                numbers.push(number1 - number2);
-            } else if (item == "*") {
-                number2 = numbers.top();
-                numbers.pop();
-                number1 = numbers.top();
-                numbers.pop();
-                numbers.push(number1 * number2);
-            } else if (item == "/") {
-                number2 = numbers.top();
-                numbers.pop();
-                number1 = numbers.top();
-                numbers.pop();
-                numbers.push(number1 / number2);
+
+                if (item == "+")
+                    numbers.push(number1 + number2);
+                else if (item == "-")
+                    numbers.push(number1 - number2);
+                else if (item == "*")
+                    numbers.push(number1 * number2);
+                else if (item == "/")
+                    numbers.push(number1 / number2);
+
+                /*} else if (item == "-") {
+                    number2 = numbers.top();
+                    numbers.pop();
+                    number1 = numbers.top();
+                    numbers.pop();
+                    numbers.push(number1 - number2);
+                } else if (item == "*") {
+                    number2 = numbers.top();
+                    numbers.pop();
+                    number1 = numbers.top();
+                    numbers.pop();
+                    numbers.push(number1 * number2);
+                } else if (item == "/") {
+                    number2 = numbers.top();
+                    numbers.pop();
+                    number1 = numbers.top();
+                    numbers.pop();
+                    numbers.push(number1 / number2);*/
             } else {
                 numbers.push(stoi(item));
             }
